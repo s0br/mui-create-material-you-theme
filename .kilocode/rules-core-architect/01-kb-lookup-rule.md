@@ -29,8 +29,8 @@ This rule defines how the `core-architect` mode should access its dedicated Know
 
 **Expected Behavior:**
 
-*   The mode should prioritize information found within its designated KB.
-*   The lookup should be triggered automatically or explicitly when architectural knowledge is required.
-*   The results of the lookup should inform the mode's subsequent actions and responses.
+- The mode should prioritize information found within its designated KB.
+- The lookup should be triggered automatically or explicitly when architectural knowledge is required.
+- The results of the lookup should inform the mode's subsequent actions and responses.
 
-*(Note: The specific implementation of the lookup mechanism depends on the underlying system capabilities.)*
+_(Note: The specific implementation of the lookup mechanism depends on the underlying system capabilities.)_

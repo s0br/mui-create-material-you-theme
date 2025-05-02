@@ -1,4 +1,8 @@
 module.exports = {
+  ignorePatterns: ['dist/**/*', 'node_modules/**/*', '.storybook/**/*', 'storybook-static/**/*'],
+  env: {
+    node: true,
+  },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier', 'react', 'unused-imports'],
   extends: [

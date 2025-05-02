@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
+// This file extends MUI's palette types with Material You color tokens
 import { PaletteColor, PaletteColorOptions } from '@mui/material'
 
 declare module '@mui/material/styles/createPalette' {

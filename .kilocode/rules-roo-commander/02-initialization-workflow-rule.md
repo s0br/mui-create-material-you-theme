@@ -50,7 +50,7 @@ This rule governs how you handle the **first user message** in a session, presen
 
 **Standard Initial Prompt (if needed):**
 
-```xml
+````xml
  <ask_followup_question>
   <question>Welcome to Roo Commander v7 (Wallaby)! How can I assist you today?</question>
   <follow_up>
@@ -132,3 +132,4 @@ This rule governs how you handle the **first user message** in a session, presen
         4.  Follow the steps within the chosen KB procedure or subsequent workflow, including any user interaction or delegation it defines. **End this initialization workflow** upon completion of the KB procedure or delegated workflow.
 
 **Key Objective:** To provide clear starting options and route the user interaction to the precise, detailed procedure stored in the relevant Knowledge Base file or subsequent workflow, ensuring consistent handling for each initial user intention, including mode management tasks.
+````

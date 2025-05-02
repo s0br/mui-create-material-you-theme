@@ -56,4 +56,5 @@ This rule defines the `ask_followup_question` to present when the user selects t
     </follow_up>
     </ask_followup_question>
     ```
+
 3.  **Next Step:** Based on the user's selection, the `agent-mcp-manager` should consult the corresponding `install-[server-name].md` KB file in its knowledge base (`.ruru/modes/agent-mcp-manager/kb/`) for the specific installation procedure.

@@ -26,6 +26,6 @@ kb_directory = ".ruru/modes/design-d3/kb/"
 3.  **Synthesize Information:** Integrate the information found in the KB into your thought process and final output.
 4.  **Cite Sources (If Applicable):** If specific information from a KB file is used directly, briefly mention the source file (e.g., "Based on guidance in `kb/01-core-principles.md`...").
 5.  **Proceed if KB is Empty/Irrelevant:** If the KB directory is empty, contains no relevant files for the current task, or you have already consulted the relevant files, proceed with the task using your general knowledge and the provided context.
-6.  **Do Not Modify KB:** This rule is for *reading* the KB only. Do not add, delete, or modify files within the `.ruru/modes/design-d3/kb/` directory unless specifically instructed by a separate task.
+6.  **Do Not Modify KB:** This rule is for _reading_ the KB only. Do not add, delete, or modify files within the `.ruru/modes/design-d3/kb/` directory unless specifically instructed by a separate task.
 
 **Rationale:** This rule ensures that the mode leverages its specialized knowledge base, promoting consistency, accuracy, and adherence to established patterns or guidelines defined for the `design-d3` mode. Even if the KB is currently empty, adhering to this lookup process establishes the correct operational pattern for the future.

@@ -24,8 +24,8 @@ relevance = "High: Core delegation logic"
 1.  **Define Goal:** Clearly define the task objective.
 2.  **Select Specialist:** Consult Stack Profile (`.ruru/context/stack_profile.json`) and the **Mode Selection Guide (`.ruru/docs/standards/mode_selection_guide.md`)**. Match task requirements/tags to specialist capabilities. Prioritize specific modes over generalists. Log rationale (Rule `08`).
 3.  **Determine Method:**
-    *   **Use MDTM Workflow if:** Task is complex, stateful, high-risk, requires detailed tracking/handoffs (Ref: Rule `04-mdtm-workflow-initiation.md`). Consult KB `.ruru/modes/roo-commander/kb/04-delegation-mdtm.md` for detailed procedure if needed.
-    *   **Use Simple `new_task` if:** Task is straightforward, read-only, or low-risk.
+    - **Use MDTM Workflow if:** Task is complex, stateful, high-risk, requires detailed tracking/handoffs (Ref: Rule `04-mdtm-workflow-initiation.md`). Consult KB `.ruru/modes/roo-commander/kb/04-delegation-mdtm.md` for detailed procedure if needed.
+    - **Use Simple `new_task` if:** Task is straightforward, read-only, or low-risk.
 4.  **Prepare Context:** Gather essential context (goal, criteria, file paths, Task IDs, Stack Profile).
 5.  **Execute Delegation:** Use `new_task`. For MDTM, follow Rule `04-mdtm-workflow-initiation.md` (which includes creating the task file first). For simple tasks, provide context directly in the message.
 6.  **Log & Monitor:** Log delegation (Rule `08`). Monitor via Rule `04`.

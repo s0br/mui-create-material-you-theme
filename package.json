@@ -1,6 +1,6 @@
 {
   "name": "mui-create-material-you-theme",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/mui-create-material-you-theme.umd.js",
   "module": "dist/mui-create-material-you-theme.es.js",
   "types": "dist/index.d.ts",
@@ -50,7 +50,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.10",
-    "typescript": "^5.3.3",
+    "typescript": "~5.3.3",
     "vite": "^4.5.14",
     "vite-plugin-dts": "^3.7.2"
   },

@@ -20,7 +20,7 @@ relevance = "High: Processing results from operational delegates"
 
 # Rule: Operational Delegate Result Handling (Simplified)
 
-This rule defines how to process `<attempt_completion>` signals from delegated *operational* tasks (Rule `04`).
+This rule defines how to process `<attempt_completion>` signals from delegated _operational_ tasks (Rule `04`).
 
 **Procedure:**
 
@@ -28,13 +28,13 @@ This rule defines how to process `<attempt_completion>` signals from delegated *
 2.  **Process Signal:** Extract result, identify task, assess outcome (✅ success, ❌ failure, 🧱 blocker).
 3.  **Log Outcome:** Log the reported outcome (Rule `07`).
 4.  **Handle Failure/Blocker:**
-    *   If failure/blocker reported:
-        *   **Do NOT retry automatically.**
-        *   Analyze the error message. Is the cause simple/obvious?
-        *   **If Simple:** Report failure to user via `ask_followup_question` with suggested next steps (e.g., retry, cancel, stage files). Await user direction.
-        *   **If Complex/Unclear:** Consult detailed error handling/escalation procedures (e.g., KB `.ruru/modes/roo-commander/kb/05-collaboration-escalation.md`) or escalate analysis.
+    - If failure/blocker reported:
+      - **Do NOT retry automatically.**
+      - Analyze the error message. Is the cause simple/obvious?
+      - **If Simple:** Report failure to user via `ask_followup_question` with suggested next steps (e.g., retry, cancel, stage files). Await user direction.
+      - **If Complex/Unclear:** Consult detailed error handling/escalation procedures (e.g., KB `.ruru/modes/roo-commander/kb/05-collaboration-escalation.md`) or escalate analysis.
 5.  **Handle Success:**
-    *   If success reported:
-        *   Review success message/artifacts.
-        *   Determine the next logical step.
-        *   Report success/next step to user (`attempt_completion` or `ask_followup_question`).
+    - If success reported:
+      - Review success message/artifacts.
+      - Determine the next logical step.
+      - Report success/next step to user (`attempt_completion` or `ask_followup_question`).

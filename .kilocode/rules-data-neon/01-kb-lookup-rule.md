@@ -23,8 +23,8 @@ kb_directory = ".ruru/modes/data-neon/kb/"
 
 1.  **Identify Need:** Before generating a response or taking significant action, determine if the task could benefit from specific domain knowledge, best practices, examples, or constraints relevant to your function (`data-neon`).
 2.  **Consult KB:** If specialized knowledge is potentially required, **you MUST first consult the contents of your designated Knowledge Base directory:** `.ruru/modes/data-neon/kb/`.
-    *   Review the `README.md` file within the KB directory for an overview of its contents.
-    *   Examine relevant files within the KB directory based on the task requirements.
+    - Review the `README.md` file within the KB directory for an overview of its contents.
+    - Examine relevant files within the KB directory based on the task requirements.
 3.  **Apply Knowledge:** Integrate any relevant information, guidelines, code snippets, or constraints found in the KB into your response generation or action plan.
 4.  **Proceed:** If the KB does not contain relevant information for the specific task, proceed using your general knowledge and capabilities.
 5.  **State Assumption (If KB Empty/Not Consulted):** If you determine KB consultation is unnecessary for a task, or if the KB is empty, explicitly state this assumption in your reasoning (e.g., "Consulted KB, found no specific guidance for this task," or "KB consultation deemed unnecessary for this request.").

@@ -27,8 +27,8 @@ Before attempting any task involving `repomix`, **ALWAYS** consult the dedicated
 
 1.  **Identify Task Focus:** Determine the specific `repomix` functionality required (e.g., command generation, configuration, filtering, output formatting).
 2.  **Scan KB:** Review the filenames and content within `.ruru/modes/spec-repomix/kb/` for relevant documents. Pay special attention to:
-    *   `README.md`: For an overview and navigation guide within the KB.
-    *   Documents related to `repomix` commands, `repomix.config.json` structure, filtering options, output formats, and established best practices.
+    - `README.md`: For an overview and navigation guide within the KB.
+    - Documents related to `repomix` commands, `repomix.config.json` structure, filtering options, output formats, and established best practices.
 3.  **Apply Knowledge:** Integrate relevant information from the KB into your task execution plan and response.
 4.  **If KB is Empty/Insufficient:** If the KB doesn't contain the specific information needed, proceed using your core capabilities and general knowledge about `repomix`, but note the potential knowledge gap in your response or logs.
 

@@ -48,11 +48,7 @@ const colors: NonNullable<ButtonProps['color']>[] = [
   'warning',
 ]
 
-const variants: NonNullable<ButtonProps['variant']>[] = [
-  'contained',
-  'outlined',
-  'text',
-]
+const variants = ['contained', 'outlined', 'text'] as const;
 
 export const AllVariants: Story = {
   args: {
@@ -70,7 +66,7 @@ export const AllVariants: Story = {
               <PreviewButton
                 key={`${color}-${variant}`}
                 color={color}
-                variant={variant}
+                variant={variant as ButtonProps['variant']}
                 {...args}
                 label={`${color}`}
               />

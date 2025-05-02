@@ -21,9 +21,9 @@ This rule instructs the AI assistant operating in the `manager-project` mode on 
 
 ## Rule Details
 
-*   **Target Mode:** `manager-project` (Project Manager - MDTM)
-*   **Knowledge Base Directory:** `.ruru/modes/manager-project/kb`
-*   **Lookup Trigger:** When the assistant needs specific procedural information, best practices, templates, or historical context related to MDTM project management tasks within this workspace.
-*   **Lookup Strategy:** Search the specified `kb_directory` for Markdown files (`.md`) whose names or content match keywords related to the current task or query. Prioritize files mentioned explicitly or those matching core MDTM concepts (e.g., "task creation", "status update", "reporting", "MDTM template").
-*   **Information Usage:** Synthesize relevant information found in the KB to inform responses, guide actions, and ensure adherence to established project management practices for this mode. Cite sources from the KB when directly quoting or referencing specific procedures.
-*   **Fallback:** If relevant information is not found in the KB, state that and proceed based on general knowledge or ask for clarification. Do not invent procedures not documented in the KB.
+- **Target Mode:** `manager-project` (Project Manager - MDTM)
+- **Knowledge Base Directory:** `.ruru/modes/manager-project/kb`
+- **Lookup Trigger:** When the assistant needs specific procedural information, best practices, templates, or historical context related to MDTM project management tasks within this workspace.
+- **Lookup Strategy:** Search the specified `kb_directory` for Markdown files (`.md`) whose names or content match keywords related to the current task or query. Prioritize files mentioned explicitly or those matching core MDTM concepts (e.g., "task creation", "status update", "reporting", "MDTM template").
+- **Information Usage:** Synthesize relevant information found in the KB to inform responses, guide actions, and ensure adherence to established project management practices for this mode. Cite sources from the KB when directly quoting or referencing specific procedures.
+- **Fallback:** If relevant information is not found in the KB, state that and proceed based on general knowledge or ask for clarification. Do not invent procedures not documented in the KB.

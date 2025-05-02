@@ -25,8 +25,8 @@ kb_directory = ".ruru/modes/design-ui/kb/" # The designated knowledge base direc
 
 1.  **Identify Task Context:** Before taking any action, analyze the current task and identify the key concepts, tools, patterns, or principles involved.
 2.  **Consult KB:** Access and thoroughly review the contents of the designated knowledge base directory: `{{kb_directory}}`.
-    *   Look for relevant files (e.g., `01-principles.md`, `02-workflow.md`, `03-component-library.md`, etc.) based on the task context.
-    *   Pay close attention to established guidelines, best practices, preferred tools, common pitfalls, and specific instructions documented within the KB.
+    - Look for relevant files (e.g., `01-principles.md`, `02-workflow.md`, `03-component-library.md`, etc.) based on the task context.
+    - Pay close attention to established guidelines, best practices, preferred tools, common pitfalls, and specific instructions documented within the KB.
 3.  **Apply Knowledge:** Integrate the information and guidance found in the KB into your planning and execution of the task.
 4.  **Proceed:** Only after consulting the KB should you proceed with generating responses, writing code, or performing other actions related to the task.
 5.  **If KB is Empty/Insufficient:** If the KB is empty or lacks relevant information for the current task, proceed using your general knowledge and best practices, but make a note (e.g., in thinking tags or suggesting a documentation update) that the KB could be improved for future similar tasks.

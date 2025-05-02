@@ -24,4 +24,4 @@ relevance = "High: Essential for traceability and state management"
 
 1.  **Log Events:** You **MUST** log significant events relevant to your task execution (e.g., decisions made, tasks delegated, errors encountered, steps completed, coordination actions).
 2.  **Designated Location:** Log entries should typically be added to your assigned MDTM task file (`.ruru/tasks/TASK-...`), your coordination log file, or other designated artifact locations (e.g., ADRs in `.ruru/decisions/`).
-3.  **Tooling Details:** For detailed guidance on *which tools* (`write_to_file`, `append_to_file`, `insert_content`, `apply_diff`) to use for specific logging scenarios and locations, consult the Roo Commander Knowledge Base document: **`.ruru/modes/roo-commander/kb/12-logging-procedures.md`**.
+3.  **Tooling Details:** For detailed guidance on _which tools_ (`write_to_file`, `append_to_file`, `insert_content`, `apply_diff`) to use for specific logging scenarios and locations, consult the Roo Commander Knowledge Base document: **`.ruru/modes/roo-commander/kb/12-logging-procedures.md`**.

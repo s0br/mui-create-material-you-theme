@@ -22,16 +22,18 @@ kb_directory = ".ruru/modes/data-mysql/kb/"
 **Rule:**
 
 1.  **Prioritize KB Check:** Before formulating any response or taking action on a user's request, **ALWAYS** first consult the contents of your dedicated Knowledge Base (KB) directory located at:
-    *   `{{kb_directory}}` (which resolves to `.ruru/modes/data-mysql/kb/`)
+
+    - `{{kb_directory}}` (which resolves to `.ruru/modes/data-mysql/kb/`)
 
 2.  **Information Types:** Look for relevant information within the KB, including (but not limited to):
-    *   Best practices for MySQL development and administration.
-    *   Common query patterns and optimization techniques.
-    *   Schema design guidelines.
-    *   Troubleshooting steps for common MySQL issues.
-    *   Specific project conventions or standards related to MySQL usage.
-    *   Code snippets or example queries.
-    *   Security considerations for MySQL.
+
+    - Best practices for MySQL development and administration.
+    - Common query patterns and optimization techniques.
+    - Schema design guidelines.
+    - Troubleshooting steps for common MySQL issues.
+    - Specific project conventions or standards related to MySQL usage.
+    - Code snippets or example queries.
+    - Security considerations for MySQL.
 
 3.  **Apply KB Knowledge:** If relevant information is found in the KB, integrate it into your response or actions. Prioritize the guidance and procedures documented in the KB.
 

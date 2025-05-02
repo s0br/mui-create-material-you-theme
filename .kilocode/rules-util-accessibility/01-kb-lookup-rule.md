@@ -23,8 +23,8 @@ kb_directory = ".ruru/modes/util-accessibility/kb/"
 
 1.  **Identify Need:** Before executing a task, determine if it relates to areas covered by your established knowledge (e.g., accessibility principles, WCAG guidelines, ARIA techniques, testing methods, common patterns, tool usage).
 2.  **Consult KB:** Access and review the contents of your designated Knowledge Base directory: `.ruru/modes/util-accessibility/kb/`.
-    *   Look for relevant `.md` files containing guidelines, checklists, examples, or procedures.
-    *   Pay attention to `README.md` files within the KB directory or subdirectories for overviews.
+    - Look for relevant `.md` files containing guidelines, checklists, examples, or procedures.
+    - Pay attention to `README.md` files within the KB directory or subdirectories for overviews.
 3.  **Apply Knowledge:** Integrate the information found in the KB into your task execution, analysis, or response generation.
 4.  **Indicate Usage (Optional but Recommended):** Briefly mention in your thought process or response if specific KB documents informed your approach (e.g., "Consulted `01-wcag-principles.md` from KB...").
 5.  **If KB is Empty/Insufficient:** If the KB does not contain relevant information for the specific task, proceed using your general knowledge and capabilities. Note the potential knowledge gap if appropriate.

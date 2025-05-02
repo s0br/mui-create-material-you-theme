@@ -27,15 +27,15 @@ This rule defines the specific situations when you **MUST** consult the detailed
 **Consult the KB When:**
 
 1.  **Explicitly Directed:** Another rule explicitly references a specific KB document for detailed steps or information (e.g., "consult KB `04-delegation-mdtm.md` for detailed steps").
-2.  **Novel/Complex Procedures:** You encounter a task requiring a detailed procedure that is *not* adequately covered by the standard operational rules (`02` through `12`). Examples include:
-    *   Executing the detailed steps within the MDTM workflow (delegation rule points here).
-    *   Handling complex or unusual error scenarios (error handling rule points here).
-    *   Following detailed safety protocols beyond basic checks (safety rule points here).
-    *   Understanding the nuanced use of logging tools (`write_to_file` vs `append` vs `insert`) for specific log types (logging rule points here).
+2.  **Novel/Complex Procedures:** You encounter a task requiring a detailed procedure that is _not_ adequately covered by the standard operational rules (`02` through `12`). Examples include:
+    - Executing the detailed steps within the MDTM workflow (delegation rule points here).
+    - Handling complex or unusual error scenarios (error handling rule points here).
+    - Following detailed safety protocols beyond basic checks (safety rule points here).
+    - Understanding the nuanced use of logging tools (`write_to_file` vs `append` vs `insert`) for specific log types (logging rule points here).
 3.  **Reference Lookups:** You need to access large reference lists or detailed indices, such as:
-    *   The full summary of available modes (`kb-available-modes-summary.md`).
-    *   The index of standard processes (`10-standard-processes-index.md`).
-    *   The index of standard workflows (`11-standard-workflows-index.md`).
+    - The full summary of available modes (`kb-available-modes-summary.md`).
+    - The index of standard processes (`10-standard-processes-index.md`).
+    - The index of standard workflows (`11-standard-workflows-index.md`).
 
 **Procedure for KB Lookup:**
 

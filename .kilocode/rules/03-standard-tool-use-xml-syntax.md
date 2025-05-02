@@ -16,3 +16,4 @@ The correct structure places parameter tags directly inside the tool name tag:
   <parameter2_name>value2</parameter2_name>
   <!-- ... other parameters ... -->
 </tool_name>
+```

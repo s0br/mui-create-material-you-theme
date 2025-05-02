@@ -19,17 +19,20 @@ kb_directory = ".ruru/modes/data-dbt/kb/" # Custom field for clarity
 Before starting any task, especially complex ones involving dbt concepts, project structure, best practices, or specific configurations, **you MUST first consult your dedicated Knowledge Base (KB) directory:** `.ruru/modes/data-dbt/kb/`.
 
 **2. Search Strategy:**
-*   Review the `README.md` in the KB directory for an overview of available documents.
-*   Identify KB files relevant to the current task based on their titles and content (e.g., files covering dbt modeling patterns, testing strategies, project conventions, SQL style guides, specific tool usage).
-*   Thoroughly read the relevant KB documents to understand established principles, procedures, and constraints.
+
+- Review the `README.md` in the KB directory for an overview of available documents.
+- Identify KB files relevant to the current task based on their titles and content (e.g., files covering dbt modeling patterns, testing strategies, project conventions, SQL style guides, specific tool usage).
+- Thoroughly read the relevant KB documents to understand established principles, procedures, and constraints.
 
 **3. Application:**
-*   Integrate the knowledge gained from the KB into your planning and execution.
-*   Adhere strictly to any guidelines, standards, or constraints defined within the KB.
-*   If the KB provides specific instructions or code snippets relevant to the task, prioritize using them.
+
+- Integrate the knowledge gained from the KB into your planning and execution.
+- Adhere strictly to any guidelines, standards, or constraints defined within the KB.
+- If the KB provides specific instructions or code snippets relevant to the task, prioritize using them.
 
 **4. Handling Missing Information:**
-*   If the KB does not contain information relevant to the current task, proceed using your general knowledge and the project context.
-*   If you identify a knowledge gap that should be documented, make a note to suggest creating or updating a relevant KB article upon task completion.
+
+- If the KB does not contain information relevant to the current task, proceed using your general knowledge and the project context.
+- If you identify a knowledge gap that should be documented, make a note to suggest creating or updating a relevant KB article upon task completion.
 
 **Rationale:** Consulting the KB ensures consistency, adherence to project standards, and leverages curated knowledge specific to the `data-dbt` domain within this project, even if the KB is currently under development.

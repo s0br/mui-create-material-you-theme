@@ -7,10 +7,10 @@ The fetch tool will truncate the response, but by using the `start_index` argume
 ### Available Tools
 
 - `fetch` - Fetches a URL from the internet and extracts its contents as markdown.
-    - `url` (string, required): URL to fetch
-    - `max_length` (integer, optional): Maximum number of characters to return (default: 5000)
-    - `start_index` (integer, optional): Start content from this character index (default: 0)
-    - `raw` (boolean, optional): Get raw content without markdown conversion (default: false)
+  - `url` (string, required): URL to fetch
+  - `max_length` (integer, optional): Maximum number of characters to return (default: 5000)
+  - `start_index` (integer, optional): Start content from this character index (default: 0)
+  - `raw` (boolean, optional): Get raw content without markdown conversion (default: false)
 
 ### Prompts
 
@@ -26,7 +26,7 @@ Optionally: Install node.js, this will cause the fetch server to use a different
 ### Using uv (recommended)
 
 When using [`uv`](https://docs.astral.sh/uv/) no specific installation is needed. We will
-use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run *mcp-server-fetch*.
+use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run _mcp-server-fetch_.
 
 ### Using PIP
 
@@ -59,6 +59,7 @@ Add to your Claude settings:
   }
 }
 ```
+
 </details>
 
 <details>
@@ -72,6 +73,7 @@ Add to your Claude settings:
   }
 }
 ```
+
 </details>
 
 <details>
@@ -85,6 +87,7 @@ Add to your Claude settings:
   }
 }
 ```
+
 </details>
 
 ### Configure for VS Code
@@ -116,6 +119,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
   }
 }
 ```
+
 </details>
 
 <details>
@@ -133,6 +137,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
   }
 }
 ```
+
 </details>
 
 ### Customization - robots.txt
@@ -145,10 +150,13 @@ the request was user initiated (via a prompt). This can be disabled by adding th
 
 By default, depending on if the request came from the model (via a tool), or was user initiated (via a prompt), the
 server will use either the user-agent
+
 ```
 ModelContextProtocol/1.0 (Autonomous; +https://github.com/modelcontextprotocol/servers)
 ```
+
 or
+
 ```
 ModelContextProtocol/1.0 (User-Specified; +https://github.com/modelcontextprotocol/servers)
 ```

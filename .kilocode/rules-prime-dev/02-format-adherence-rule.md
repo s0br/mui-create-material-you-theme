@@ -17,10 +17,10 @@ related_context = [".kilocode/rules/01-standard-toml-md-format.md"]
 
 **Specific Attention:**
 
-*   **`.mode.md` Files:** These files use the TOML+Markdown standard.
-    *   Ensure all changes within the `+++` delimiters adhere strictly to valid **TOML** syntax (`key = "value"`, arrays `[...]`, etc.).
-    *   Ensure all changes *outside* the `+++` delimiters use valid **Markdown**.
-    *   Consult the workspace standard `.kilocode/rules/01-standard-toml-md-format.md` for detailed TOML+MD specifications if necessary.
-*   **`.js` / `.ts` Files:** Maintain valid JavaScript/TypeScript syntax.
-*   **`.json` Files:** Maintain valid JSON syntax.
-*   **`.toml` Files:** Maintain valid TOML syntax.
+- **`.mode.md` Files:** These files use the TOML+Markdown standard.
+  - Ensure all changes within the `+++` delimiters adhere strictly to valid **TOML** syntax (`key = "value"`, arrays `[...]`, etc.).
+  - Ensure all changes _outside_ the `+++` delimiters use valid **Markdown**.
+  - Consult the workspace standard `.kilocode/rules/01-standard-toml-md-format.md` for detailed TOML+MD specifications if necessary.
+- **`.js` / `.ts` Files:** Maintain valid JavaScript/TypeScript syntax.
+- **`.json` Files:** Maintain valid JSON syntax.
+- **`.toml` Files:** Maintain valid TOML syntax.

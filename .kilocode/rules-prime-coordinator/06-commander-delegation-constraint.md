@@ -15,7 +15,7 @@ related_context = ["01-operational-principles.md"]
 
 **Constraint Text:**
 
-When delegating *any* task to the operational `roo-commander` mode using `new_task`, you **MUST** include the following explicit constraint within the `<message>` tag:
+When delegating _any_ task to the operational `roo-commander` mode using `new_task`, you **MUST** include the following explicit constraint within the `<message>` tag:
 
 "**Constraint:** You MUST NOT modify files matching these patterns: `.kilocode/rules/**`, `.kilocode/rules-prime*/**`, `.modes/prime*/**`, `.kilocodemodes*`, `build_*.js`, `create_build.js`."
 

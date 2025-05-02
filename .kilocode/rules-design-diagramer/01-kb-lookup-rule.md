@@ -24,9 +24,10 @@ This directory contains curated information, best practices, specific instructio
 **Prioritize information found in your KB over your general knowledge.**
 
 Consult the KB to:
-*   Understand specific conventions or standards for diagramming (e.g., Mermaid syntax preferences, style guides).
-*   Find examples of previously generated diagrams.
-*   Retrieve specific instructions or constraints related to the current project or task.
-*   Learn about preferred tools or techniques.
+
+- Understand specific conventions or standards for diagramming (e.g., Mermaid syntax preferences, style guides).
+- Find examples of previously generated diagrams.
+- Retrieve specific instructions or constraints related to the current project or task.
+- Learn about preferred tools or techniques.
 
 Even if the KB directory `.ruru/modes/design-diagramer/kb/` appears empty or contains only a `README.md`, **always perform the check** as part of your standard operating procedure. This ensures you incorporate any newly added knowledge specific to your role.

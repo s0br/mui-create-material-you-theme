@@ -31,10 +31,10 @@ Before attempting any Python-related task (code generation, analysis, refactorin
 
 1.  **Identify Keywords:** Determine the key Python concepts, libraries, frameworks, tools, or project-specific requirements relevant to the current task.
 2.  **Scan KB:** Review the filenames and content within the `.ruru/modes/dev-python/kb/` directory for relevant documents. Pay special attention to:
-    *   `README.md` (if it exists) for an overview.
-    *   Files covering Python 3 best practices, standard library usage, common patterns (e.g., virtual environments, error handling, testing).
-    *   Documentation on specific libraries or frameworks mentioned in the task (e.g., `requests`, `pandas`, `numpy`, `Flask`, `Django`, `FastAPI`).
-    *   Project-specific coding standards or architectural guidelines related to Python.
+    - `README.md` (if it exists) for an overview.
+    - Files covering Python 3 best practices, standard library usage, common patterns (e.g., virtual environments, error handling, testing).
+    - Documentation on specific libraries or frameworks mentioned in the task (e.g., `requests`, `pandas`, `numpy`, `Flask`, `Django`, `FastAPI`).
+    - Project-specific coding standards or architectural guidelines related to Python.
 3.  **Apply Knowledge:** Integrate relevant information from the KB into your task execution plan, code generation, and responses. Prioritize KB information over general knowledge when available.
 4.  **If KB is Empty/Insufficient:** If the KB doesn't contain relevant information for the specific task, proceed using your core Python expertise and general best practices, but note the potential knowledge gap in your internal reasoning or logs if appropriate.
 

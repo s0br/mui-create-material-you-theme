@@ -34,16 +34,16 @@ This rule defines how to handle requests (Type A from Rule `02`) to modify Roo C
 
 1.  **Receive Request:** Obtain the target file path (`TARGET_PATH`) and desired changes.
 2.  **Define Path Patterns:**
-    *   `PROTECTED_CORE_PATHS` = patterns matching: `.kilocode/rules/**`, `.ruru/modes/roo-commander/**`, `.kilocode/rules-roo-commander/**`, `.ruru/modes/prime*/**`, `.kilocode/rules-prime*/**`, `build_*.js`, `create_build.js`. (These use Direct Auto-Apply).
-    *   `GENERATED_CONFIG_PATHS` = patterns matching: `.kilocodemodes*`. (These are generated files, editing directly is discouraged).
+    - `PROTECTED_CORE_PATHS` = patterns matching: `.kilocode/rules/**`, `.ruru/modes/roo-commander/**`, `.kilocode/rules-roo-commander/**`, `.ruru/modes/prime*/**`, `.kilocode/rules-prime*/**`, `build_*.js`, `create_build.js`. (These use Direct Auto-Apply).
+    - `GENERATED_CONFIG_PATHS` = patterns matching: `.kilocodemodes*`. (These are generated files, editing directly is discouraged).
 3.  **Check Path & Execute Appropriate Workflow:**
-    *   **IF `TARGET_PATH` matches `GENERATED_CONFIG_PATHS`:** Initiate **Generated File Handling**.
-        *   *Brief:* **Do not proceed with direct edit.** Ask the user for confirmation, explaining that this file is auto-generated. Strongly suggest running the appropriate build script (e.g., `node build_roomodes.js`) instead of manual editing. If the user insists on manual editing *after* the warning, proceed with the "Direct Auto-Apply Workflow (Operational)" below.
-    *   **ELSE IF `TARGET_PATH` matches `PROTECTED_CORE_PATHS`:** Initiate the **Direct Auto-Apply Workflow (Operational)**.
-        *   *Brief:* Delegate edit directly to worker (`prime-txt`/`prime-dev`) -> Worker applies change directly (worker's internal confirmation rule still applies) -> Worker reports completion/failure.
-        *   Consult **KB `.ruru/modes/prime-coordinator/kb/07-meta-dev-direct-auto-apply-operational.md`** for the detailed procedure.
-    *   **ELSE (Operational Config - not protected):** Initiate the **Direct Auto-Apply Workflow (Operational)**.
-        *   *Brief:* Delegate edit directly to worker (`prime-txt`/`prime-dev`) -> Worker applies change directly (worker's internal confirmation rule still applies) -> Worker reports completion/failure.
-        *   Consult **KB `.ruru/modes/prime-coordinator/kb/07-meta-dev-direct-auto-apply-operational.md`** for the detailed procedure.
+    - **IF `TARGET_PATH` matches `GENERATED_CONFIG_PATHS`:** Initiate **Generated File Handling**.
+      - _Brief:_ **Do not proceed with direct edit.** Ask the user for confirmation, explaining that this file is auto-generated. Strongly suggest running the appropriate build script (e.g., `node build_roomodes.js`) instead of manual editing. If the user insists on manual editing _after_ the warning, proceed with the "Direct Auto-Apply Workflow (Operational)" below.
+    - **ELSE IF `TARGET_PATH` matches `PROTECTED_CORE_PATHS`:** Initiate the **Direct Auto-Apply Workflow (Operational)**.
+      - _Brief:_ Delegate edit directly to worker (`prime-txt`/`prime-dev`) -> Worker applies change directly (worker's internal confirmation rule still applies) -> Worker reports completion/failure.
+      - Consult **KB `.ruru/modes/prime-coordinator/kb/07-meta-dev-direct-auto-apply-operational.md`** for the detailed procedure.
+    - **ELSE (Operational Config - not protected):** Initiate the **Direct Auto-Apply Workflow (Operational)**.
+      - _Brief:_ Delegate edit directly to worker (`prime-txt`/`prime-dev`) -> Worker applies change directly (worker's internal confirmation rule still applies) -> Worker reports completion/failure.
+      - Consult **KB `.ruru/modes/prime-coordinator/kb/07-meta-dev-direct-auto-apply-operational.md`** for the detailed procedure.
 
 **Key Objective:** Ensure safety for all configuration, rules, modes, and build scripts by relying on the worker's confirmation step before any write action via the Direct Auto-Apply workflow. Discourage direct editing of generated files (`GENERATED_CONFIG_PATHS`) by suggesting build scripts first.

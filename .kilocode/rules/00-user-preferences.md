@@ -32,7 +32,11 @@ auto_execute_commands = false # << OPTIONAL >>
 +++
 
 # User Preferences Data (Defined in TOML)
+
 # This file stores user-specific preferences and profile information.
+
 # The primary content is within the TOML block above.
+
 # Use the TOML fields to tailor interactions and understand user context.
+
 # Add any free-form notes below if necessary, but prioritize structured data in TOML.
