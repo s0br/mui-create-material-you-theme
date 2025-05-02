@@ -1,10 +1,10 @@
 {
   "name": "mui-create-material-you-theme",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "dist/mui-create-material-you-theme.umd.js",
   "module": "dist/mui-create-material-you-theme.es.js",
   "types": "dist/index.d.ts",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/s0br/mui-create-material-you-theme.git"
   },
@@ -63,5 +63,11 @@
     "adm-zip": "^0.5.16",
     "archiver": "^7.0.1",
     "yargs": "^17.7.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue-template-compiler@>=2.0.0 <3.0.0": "2.7.16",
+      "esbuild@<=0.24.2": ">=0.25.0"
+    }
   }
 }

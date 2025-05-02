@@ -1,9 +1,9 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material'
 
 export interface MaterialYouAccordion {
-    MuiAccordion: {
-        defaultProps?: ComponentsProps['MuiAccordion'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiAccordion'];
-        variants?: ComponentsVariants['MuiAccordion'];
-    };
+  MuiAccordion: {
+    defaultProps?: ComponentsProps['MuiAccordion']
+    styleOverrides?: ComponentsOverrides<Theme>['MuiAccordion']
+    variants?: ComponentsVariants['MuiAccordion']
+  }
 }

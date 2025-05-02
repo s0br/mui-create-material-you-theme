@@ -408,7 +408,7 @@ export const PreviewColors = () => {
         </Grid>
       </Grid>
     </Stack>
-  );
+  )
 }
 
 const meta: Meta<typeof PreviewColors> = {

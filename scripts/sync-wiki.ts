@@ -176,7 +176,7 @@ async function cleanup(dir: string): Promise<void> {
  * @returns A formatted title string.
  */
 function formatTitle(filename: string): string {
-  return path.basename(filename, '.md').replace(/[-_]/g, ' ');
+  return path.basename(filename, '.md').replace(/[-_]/g, ' ')
 }
 
 /**

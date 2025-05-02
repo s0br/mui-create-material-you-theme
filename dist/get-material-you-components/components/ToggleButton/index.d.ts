@@ -1,1 +1,1 @@
-export * from './getToggleButton';
+export * from './getToggleButton'

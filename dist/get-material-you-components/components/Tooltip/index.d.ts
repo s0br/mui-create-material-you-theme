@@ -1,1 +1,1 @@
-export * from './getTooltip';
+export * from './getTooltip'

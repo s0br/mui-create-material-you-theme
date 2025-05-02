@@ -1,1 +1,1 @@
-export * from './getDrawer';
+export * from './getDrawer'

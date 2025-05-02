@@ -1,1 +1,1 @@
-export * from './getToggleButtonGroup';
+export * from './getToggleButtonGroup'

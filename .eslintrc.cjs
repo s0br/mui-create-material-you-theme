@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ['dist/**/*', 'node_modules/**/*', '.storybook/**/*', 'storybook-static/**/*'],
+  ignorePatterns: ['dist/**/*', 'node_modules/**/*', '.storybook/**/*', 'storybook-static/**/*', '.kilocode/**/*'],
   env: {
     node: true,
   },

@@ -1,9 +1,9 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material'
 
 export interface MaterialYouCssBaseline {
-    MuiCssBaseline: {
-        defaultProps?: ComponentsProps['MuiCssBaseline'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiCssBaseline'];
-        variants?: ComponentsVariants['MuiCssBaseline'];
-    };
+  MuiCssBaseline: {
+    defaultProps?: ComponentsProps['MuiCssBaseline']
+    styleOverrides?: ComponentsOverrides<Theme>['MuiCssBaseline']
+    variants?: ComponentsVariants['MuiCssBaseline']
+  }
 }

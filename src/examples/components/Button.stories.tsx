@@ -48,7 +48,7 @@ const colors: NonNullable<ButtonProps['color']>[] = [
   'warning',
 ]
 
-const variants = ['contained', 'outlined', 'text'] as const;
+const variants = ['contained', 'outlined', 'text'] as const
 
 export const AllVariants: Story = {
   args: {

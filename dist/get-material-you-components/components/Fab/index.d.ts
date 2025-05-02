@@ -1,1 +1,1 @@
-export * from './getFab';
+export * from './getFab'

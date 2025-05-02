@@ -1,1 +1,1 @@
-export * from './getAppBar';
+export * from './getAppBar'

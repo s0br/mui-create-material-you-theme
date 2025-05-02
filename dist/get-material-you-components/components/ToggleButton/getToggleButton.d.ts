@@ -1,4 +1,4 @@
-import { Theme } from '@mui/material';
-import { MaterialYouToggleButton } from './types';
+import { Theme } from '@mui/material'
+import { MaterialYouToggleButton } from './types'
 
-export declare const getToggleButton: ({ palette }: Theme) => MaterialYouToggleButton;
+export declare const getToggleButton: ({ palette }: Theme) => MaterialYouToggleButton

@@ -1,4 +1,4 @@
-import { Theme } from '@mui/material';
-import { MaterialYouListItem } from './types';
+import { Theme } from '@mui/material'
+import { MaterialYouListItem } from './types'
 
-export declare const getListItem: (_theme: Theme) => MaterialYouListItem;
+export declare const getListItem: (_theme: Theme) => MaterialYouListItem

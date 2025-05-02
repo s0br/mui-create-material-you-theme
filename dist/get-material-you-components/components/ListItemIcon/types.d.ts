@@ -1,9 +1,9 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material'
 
 export interface MaterialYouListItemIcon {
-    MuiListItemIcon: {
-        defaultProps?: ComponentsProps['MuiListItemIcon'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiListItemIcon'];
-        variants?: ComponentsVariants['MuiListItemIcon'];
-    };
+  MuiListItemIcon: {
+    defaultProps?: ComponentsProps['MuiListItemIcon']
+    styleOverrides?: ComponentsOverrides<Theme>['MuiListItemIcon']
+    variants?: ComponentsVariants['MuiListItemIcon']
+  }
 }

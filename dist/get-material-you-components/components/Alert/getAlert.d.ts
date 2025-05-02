@@ -1,4 +1,4 @@
-import { Theme } from '@mui/material';
-import { MaterialYouAlert } from './types';
+import { Theme } from '@mui/material'
+import { MaterialYouAlert } from './types'
 
-export declare const getAlert: ({ palette }: Theme) => MaterialYouAlert;
+export declare const getAlert: ({ palette }: Theme) => MaterialYouAlert

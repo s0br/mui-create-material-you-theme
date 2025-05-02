@@ -1,1 +1,1 @@
-export * from './getSwitchColorVariant';
+export * from './getSwitchColorVariant'

@@ -46,3 +46,6 @@ build/
 .roo-temp/
 .roo-backup/
 roo-update.log
+
+# Ignore Kilocode directory
+.kilocode/*

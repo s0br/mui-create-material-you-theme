@@ -1,1 +1,1 @@
-export * from './getMaterialYouScheme';
+export * from './getMaterialYouScheme'

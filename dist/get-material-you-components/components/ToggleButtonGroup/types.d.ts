@@ -1,9 +1,9 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material'
 
 export interface MaterialYouToggleButtonGroup {
-    MuiToggleButtonGroup: {
-        defaultProps?: ComponentsProps['MuiToggleButtonGroup'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiToggleButtonGroup'];
-        variants?: ComponentsVariants['MuiToggleButtonGroup'];
-    };
+  MuiToggleButtonGroup: {
+    defaultProps?: ComponentsProps['MuiToggleButtonGroup']
+    styleOverrides?: ComponentsOverrides<Theme>['MuiToggleButtonGroup']
+    variants?: ComponentsVariants['MuiToggleButtonGroup']
+  }
 }

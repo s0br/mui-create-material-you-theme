@@ -6,7 +6,6 @@ It helps you migrate your existing theme to a Material You look and introduces s
 
 > This package does **not** provide new components or theme providers/switches — it only restyles existing MUI components.
 
-
 ## 🌟 Motivation and Goals
 
 Our company signed a contract (in summer 2024) to build a web app based on the **Material You** design system. Since we're fully invested in the MUI ecosystem and our designers used Material You in Figma, we needed to adapt the MUI library accordingly.
@@ -51,6 +50,7 @@ This library provides Material You styling overrides for the following MUI compo
 - ToggleButton
 - ToggleButtonGroup
 - Tooltip
+
 ## 📦 Installation
 
 You can install the package from NPM:

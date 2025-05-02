@@ -1,1 +1,1 @@
-export * from './getStayeLayerColor';
+export * from './getStayeLayerColor'

@@ -1,1 +1,1 @@
-export * from './getMaterialYouComponents';
+export * from './getMaterialYouComponents'
