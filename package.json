@@ -1,9 +1,13 @@
 {
   "name": "mui-create-material-you-theme",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "dist/mui-create-material-you-theme.umd.js",
   "module": "dist/mui-create-material-you-theme.es.js",
   "types": "dist/index.d.ts",
+"repository": {
+    "type": "git",
+    "url": "https://github.com/s0br/mui-create-material-you-theme.git"
+  },
   "scripts": {
     "dev": "vite",
     "prepare": "npm run build",
