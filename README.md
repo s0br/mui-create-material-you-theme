@@ -6,13 +6,6 @@ It helps you migrate your existing theme to a Material You look and introduces s
 
 > This package does **not** provide new components or theme providers/switches — it only restyles existing MUI components.
 
-## 📦 Demo
-
-Explore the live Storybook to see all Material You components in action:
-
-👉 [**Storybook Demo**](https://bobescz.github.io/mui-create-material-you-theme/storybook-static/?path=/story/components-button--all-variants)
-
-This demo shows how MUI components look when restyled with the Material You design system using this package.
 
 ## 🌟 Motivation and Goals
 
@@ -37,6 +30,27 @@ If you're interested in implementing stricter guideline compliance, we welcome c
 - Material You does not define colors for `info`, `success`, or `warning` (only `error` is included).
 - Material You introduces a `tertiary` color, which needs to be supported across all components that previously only used `primary` and `secondary`.
 
+## ✨ Styled Components
+
+This library provides Material You styling overrides for the following MUI components:
+
+- Accordion
+- Alert
+- AppBar
+- Badge
+- Button
+- Card
+- CssBaseline
+- Drawer
+- Fab
+- ListItem
+- ListItemButton
+- ListItemIcon
+- Menu
+- Switch
+- ToggleButton
+- ToggleButtonGroup
+- Tooltip
 ## 📦 Installation
 
 You can install the package from NPM:
@@ -52,7 +66,7 @@ This package is designed to work with **MUI v7** and **React 19+**.
 Make sure you have the following packages installed in your project:
 
 ```bash
-npm install @mui/material@^7.0.0 @emotion/react@^11.14.0 @emotion/styled@^11.14.0 react@^19.0.0 react-dom@^19.0.0
+npm install @mui/material@^7.0.2 @emotion/react@^11.14.0 @emotion/styled@^11.14.0 react@^19.0.0 react-dom@^19.0.0
 ```
 
 > If you are already using MUI in your project, you most likely already have these installed.

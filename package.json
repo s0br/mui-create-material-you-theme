@@ -1,6 +1,6 @@
 {
   "name": "mui-create-material-you-theme",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "dist/mui-create-material-you-theme.umd.js",
   "module": "dist/mui-create-material-you-theme.es.js",
   "types": "dist/index.d.ts",
