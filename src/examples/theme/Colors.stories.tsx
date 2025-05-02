@@ -80,7 +80,7 @@ export const PreviewColors = () => {
         {palette.mode === 'light' ? 'Light Theme' : 'Dark Theme'}
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="Primary"
             titleColor={palette.primary}
@@ -88,7 +88,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onPrimary as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="Secondary"
             titleColor={palette.secondary}
@@ -96,7 +96,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onSecondary as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="Tertiary"
             titleColor={palette.tertiary as PaletteColor}
@@ -104,7 +104,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onTertiary as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="Error"
             titleColor={palette.error}
@@ -113,7 +113,7 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="PrimaryContainer"
             titleColor={palette.primaryContainer as PaletteColor}
@@ -121,7 +121,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onPrimaryContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="SecondaryContainer"
             titleColor={palette.secondaryContainer as PaletteColor}
@@ -129,7 +129,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onSecondaryContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="TertiaryContainer"
             titleColor={palette.tertiaryContainer as PaletteColor}
@@ -137,7 +137,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onTertiaryContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreview
             title="ErrorContainer"
             titleColor={palette.errorContainer as PaletteColor}
@@ -147,28 +147,28 @@ export const PreviewColors = () => {
         </Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="PrimaryFixed"
             titleColor={palette.primaryFixed as PaletteColor}
             onTitleColor={palette.onPrimaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="PrimaryFixedDim"
             titleColor={palette.primaryFixedDim as PaletteColor}
             onTitleColor={palette.onPrimaryFixedVariant as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnPrimaryFixed"
             titleColor={palette.onPrimaryFixed as PaletteColor}
             onTitleColor={palette.primaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnPrimaryFixedVariant"
             titleColor={palette.onPrimaryFixedVariant as PaletteColor}
@@ -176,28 +176,28 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="SecondaryFixed"
             titleColor={palette.secondaryFixed as PaletteColor}
             onTitleColor={palette.onSecondaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="SecondaryFixedDim"
             titleColor={palette.secondaryFixedDim as PaletteColor}
             onTitleColor={palette.onSecondaryFixedVariant as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnSecondaryFixed"
             titleColor={palette.onSecondaryFixed as PaletteColor}
             onTitleColor={palette.secondaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnSecondaryFixedVariant"
             titleColor={palette.onSecondaryFixedVariant as PaletteColor}
@@ -205,28 +205,28 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="TertiaryFixed"
             titleColor={palette.tertiaryFixed as PaletteColor}
             onTitleColor={palette.onTertiaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="TertiaryFixedDim"
             titleColor={palette.tertiaryFixedDim as PaletteColor}
             onTitleColor={palette.onTertiaryFixedVariant as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnTertiaryFixed"
             titleColor={palette.onTertiaryFixed as PaletteColor}
             onTitleColor={palette.tertiaryFixed as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnTertiaryFixedVariant"
             titleColor={palette.onTertiaryFixedVariant as PaletteColor}
@@ -235,21 +235,21 @@ export const PreviewColors = () => {
         </Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="SurfaceDim"
             titleColor={palette.surfaceDim as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="Surface"
             titleColor={palette.surface as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="SurfaceBright"
             titleColor={palette.surfaceBright as PaletteColor}
@@ -257,35 +257,35 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Surf. ContainerLowest"
             titleColor={palette.surfaceContainerLowest as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Surf. ContainerLow"
             titleColor={palette.surfaceContainerLow as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Surf. Container"
             titleColor={palette.surfaceContainer as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Surf. ContainerHigh"
             titleColor={palette.surfaceContainerHigh as PaletteColor}
             onTitleColor={palette.onSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Surf. ContainerHighest"
             titleColor={palette.surfaceContainerHighest as PaletteColor}
@@ -293,28 +293,28 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnSurface"
             titleColor={palette.onSurface as PaletteColor}
             onTitleColor={palette.surface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OnSurfaceVariant"
             titleColor={palette.onSurfaceVariant as PaletteColor}
             onTitleColor={palette.surface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="Outline"
             titleColor={palette.outline as PaletteColor}
             onTitleColor={palette.surface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid size={3}>
           <PalettePreviewSurface
             title="OutlineVariant"
             titleColor={palette.outlineVariant as PaletteColor}
@@ -323,7 +323,7 @@ export const PreviewColors = () => {
         </Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="InverseSurface"
             titleColor={palette.inverseSurface as PaletteColor}
@@ -331,21 +331,21 @@ export const PreviewColors = () => {
             onTitleColor={palette.inverseOnSurface as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="InversePrimary"
             titleColor={palette.inversePrimary as PaletteColor}
             onTitleColor={palette.onPrimaryContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="Scrim"
             titleColor={palette.scrim as PaletteColor}
             onTitleColor={palette.inversePrimary as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreviewSurface
             title="Shadow"
             titleColor={palette.shadow as PaletteColor}
@@ -357,7 +357,7 @@ export const PreviewColors = () => {
         Custom Colors
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="Info"
             titleColor={palette.info}
@@ -365,7 +365,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onInfo as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="Warning"
             titleColor={palette.warning}
@@ -373,7 +373,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onWarning as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="Success"
             titleColor={palette.success}
@@ -382,7 +382,7 @@ export const PreviewColors = () => {
           />
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="InfoContainer"
             titleColor={palette.infoContainer as PaletteColor}
@@ -390,7 +390,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onInfoContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="WarningContainer"
             titleColor={palette.warningContainer as PaletteColor}
@@ -398,7 +398,7 @@ export const PreviewColors = () => {
             onTitleColor={palette.onWarningContainer as PaletteColor}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <PalettePreview
             title="SuccessContainer"
             titleColor={palette.successContainer as PaletteColor}
@@ -408,7 +408,7 @@ export const PreviewColors = () => {
         </Grid>
       </Grid>
     </Stack>
-  )
+  );
 }
 
 const meta: Meta<typeof PreviewColors> = {
