@@ -1,197 +1,136 @@
-# MUI Create Material You Theme
+# 👑 Roo Commander: An Advanced Multi-Agent Framework for Roo Code
 
-This package enables you to bring Material Design 3 (Material You) to your MUI-based application.
+> Roo Commander helps developers using Roo Code manage complex software projects by orchestrating specialized AI agents within VS Code, improving structure, context management, and task delegation.
 
-It helps you migrate your existing theme to a Material You look and introduces support for new props such as the `tertiary` color.
+Roo Commander is an advanced configuration layer and opinionated workflow system *built specifically for* the [Roo Code](https://github.com/RooVetGit/Roo-Code) VS Code extension. It transforms your Roo Code experience by implementing a sophisticated framework for managing software development projects using a structured, **multi-agent approach**. Imagine having a virtual, specialized software team within your VS Code workspace, orchestrated by the 👑 Roo Commander, to handle tasks with specific expertise and maintain a clear project history.
 
-> This package does **not** provide new components or theme providers/switches — it only restyles existing MUI components.
+---
 
-## 📦 Demo
+**🐾 Join the Community:** [Roo Commander Discord](https://discord.gg/ESaJBnw7As)
 
-Explore the live Storybook to see all Material You components in action:
+---
 
-👉 [**Storybook Demo**](https://bobescz.github.io/mui-create-material-you-theme/storybook-static/?path=/story/components-button--all-variants)
+## What is Roo Commander?
 
-This demo shows how MUI components look when restyled with the Material You design system using this package.
+Roo Commander isn't just a collection of modes; it's an **opinionated workflow and project management system** (meaning it prescribes specific structures and processes for optimal results) built on top of Roo Code. It addresses the challenges of complex projects and context limitations in LLMs by:
 
-## 🌟 Motivation and Goals
+*   **Specialized Roles:** Assigning tasks to **AI Agents (modes)** with specific expertise (e.g., React, API Design, Git, AWS, Testing).
+*   **Structured Communication:** Using a defined task delegation and reporting system.
+*   **Persistent Context:** Leveraging a structured project journal (`.ruru/tasks/`, `.ruru/decisions/`, etc.) and standardized document formats (TOML+Markdown) to maintain state and history effectively.
+*   **Standardized Processes:** Defining reusable workflows and procedures for common development activities.
 
-Our company signed a contract (in summer 2024) to build a web app based on the **Material You** design system. Since we're fully invested in the MUI ecosystem and our designers used Material You in Figma, we needed to adapt the MUI library accordingly.
+The goal is to bring structure, consistency, traceability, and the power of specialized AI skills to your development process.
 
-MUI currently implements **Material Design 2**, and we don't expect a Material You-compatible version to be released in 2025. Therefore, we decided to restyle MUI components ourselves.
+## Why Use Roo Commander?
 
-> The goal of this package is to **efficiently restyle MUI components to resemble Material You** — without rewriting the entire component logic or breaking MUI internals.\
-> We aim to follow Material You guidelines as closely as possible, but **not strictly**.
+*   **🧠 Specialized Expertise:** Delegate tasks to the right AI expert (e.g., let the `framework-react` mode handle React code, not a generalist).
+*   **🏗️ Structured Workflow:** Breaks down complex goals into manageable, trackable tasks using a defined system (MDTM - Markdown Task Management).
+*   **💾 Enhanced Context Management:** Mitigates LLM context window limitations through structured logging and dedicated context retrieval agents.
+*   **🔍 Traceability & Auditability:** Creates a clear history of tasks, decisions (ADRs), and actions within your project repository.
+*   **⚙️ Consistency:** Promotes consistent project structure, documentation formats, and development processes.
+*   **🚀 Potential for Automation:** The structured nature enables more reliable automation of complex development sequences.
 
-If you're interested in implementing stricter guideline compliance, we welcome contributions via pull requests!
+## Core Concepts
 
-## 📚 Concepts
+To get the most out of Roo Commander, it helps to understand these key ideas:
 
-- **Material You** = Material Design 3
-- **MUI2** = MUI's implementation of Material Design 2
+1.  **Multi-Agent System (The "Team"):**
+    *   Think of Roo Commander as managing a team of specialized **AI agents (called 'modes'** within Roo Code). They have a loose hierarchy (Commander, Managers, Specialists, etc.).
+    *   The main Commander mode analyzes your goals and delegates tasks to the most suitable specialist using a specific command (`new_task`).
+    *   *(You can find a detailed list of available roles in your installation under `.ruru/modes/roo-commander/kb/kb-available-modes-summary.md`)*
 
-### Key Challenges
+2.  **Structured Project Artifacts (TOML+Markdown):**
+    *   Roo Commander maintains project history and context using standardized files. Key information like tasks, decisions, and documentation are stored in dedicated hidden folders (like `.ruru/tasks/`, `.ruru/decisions/`).
+    *   These files use a consistent **TOML+Markdown format**: machine-readable TOML metadata at the top (for status, IDs, tags) and human-readable Markdown below. This structure ensures consistency and helps the AI track progress.
+    *   *(See rules `01-...` and `02-...` in `.kilocode/rules/` for format/folder details after installation)*.
+    *   **Example Task Snippet (`.ruru/tasks/TASK-001.md`):**
+        ```toml
+        +++
+        id = "TASK-001"
+        status = "pending"
+        assignee = "framework-react"
+        tags = ["ui", "login"]
+        +++
 
-- The MUI2 palette uses a different design system than Material You.\
-  We need to map **49 named colors** (Material You) to the existing **32 differently named** colors used by the MUI palette.
-- Material You does not define colors for `info`, `success`, or `warning` (only `error` is included).
-- Material You introduces a `tertiary` color, which needs to be supported across all components that previously only used `primary` and `secondary`.
+        ## Implement Login Button
 
-## 📦 Installation
+        Create the main login button component based on the Figma design...
+        ```
 
-You can install the package from NPM:
+3.  **Agent Instructions (Rules & Knowledge Bases):** Each AI agent's behavior is guided by:
+    *   **Rules (`.kilocode/rules/`):** Core instructions, procedures, and logic loaded directly into the AI's context for immediate use.
+    *   **Knowledge Base (`.ruru/modes/<slug>/kb/`):** Detailed references, templates, and examples specific to an agent's expertise. These are looked up *on demand* when needed, keeping the main context focused while providing deep knowledge access.
 
-```bash
-npm install mui-create-material-you-theme
-```
+## Key Features
 
-This package is designed to work with **MUI v7** and **React 18+** (including React 19).
+*   **👑 Central Coordinator:** Roo Commander orchestrates workflows and delegates tasks.
+*   **🚦 Project Onboarding:** Streamlined process for initializing new projects or analyzing existing ones.
+*   **📋 Task Management (MDTM):** Structured task tracking using TOML+Markdown files (`.ruru/tasks/`), following the Markdown Task Management system.
+*   **📖 Context Management:** Dedicated agents (`agent-context-resolver`, `agent-context-condenser`) help manage and summarize project information.
+*   **🛠️ Specialist Modes:** A wide range of modes covering various frameworks (React, Vue, Angular, Next.js, Laravel, Django, FastAPI, etc.), cloud platforms (AWS, Azure, GCP), databases (SQL, NoSQL), design tools (Tailwind, MUI, Bootstrap), testing, DevOps, security, and utilities.
+*   **📝 Decision Logging (ADRs):** Formal process for recording significant Architectural Decision Records in `.ruru/decisions/`.
+*   **🧩 Standardized Workflows & Processes:** Reusable definitions in `.ruru/workflows/` and `.ruru/processes/`.
 
-### ⚠️ Peer dependencies
+## Getting Started (Installation)
 
-Make sure you have the following packages installed in your project:
+> **Prerequisite:** You must have the [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline) VS Code extension installed and configured first.
 
-```bash
-npm install @mui/material @emotion/react @emotion/styled react react-dom
-```
+The recommended installation method uses the pre-built release:
 
-> If you are already using MUI in your project, you most likely already have these installed.
+1.  **Download:** Go to the [Roo Commander Releases page](https://github.com/jezweb/roo-commander/releases) and download the latest `roo-commander-vX.Y.Z-Codename.zip` file. *(Currently: `roo-commander-v7.1.2-Wallaby.zip`)*
+2.  **Extract:** Unzip the contents directly into the **root directory** of your VS Code project workspace. This is the top-level folder containing your code, `.git` directory (if applicable), etc.
+    *   *This will create/overwrite hidden folders like `.ruru/` and `.kilocode/` in your workspace root, containing the Roo Commander configurations and modes.*
+3.  **Reload VS Code:** Reload the VS Code window (`Ctrl+Shift+P` or `Cmd+Shift+P` -> `"Developer: Reload Window"`) to ensure Roo Code recognizes the new mode configurations.
 
-## 🚀 Usage
+This will add/overwrite the necessary hidden configuration folders (`.ruru/modes`, `.roo`, `.ruru/templates`, etc.) and files (`.kilocodemodes`).
 
-For an example of how to integrate the theme in your app, check out the code in the [App.stories.tsx file](https://github.com/BobesCZ/mui-create-material-you-theme/blob/main/src/examples/apps/App.stories.tsx).
+## Basic Usage
 
-Choose the setup that best fits your use case:
+1.  **Activate Commander:** Select the `"👑 Roo Commander"` mode in the Roo Code chat interface.
+2.  **State Your Goal:** Tell Commander what you want to achieve (e.g., `"Start planning a new Python API using FastAPI"`, `"Implement the login UI based on the design in .docs/designs/login.md"`, `"Fix the bug described in task BUG-123"`).
+3.  **Interact:** Follow Commander's lead. It will likely:
+    *   Ask clarifying questions.
+    *   Propose a plan or workflow.
+    *   Delegate tasks to specialist modes (using `<new_task>`).
+    *   Ask for your approval or feedback on steps or results.
+4.  **Review:** Check the files created/modified by the modes, especially in the `.ruru/tasks/` directory, to understand the progress and details.
 
-### Try it quickly
+## Recommended Setup (Optional, for Optimal Performance)
 
-Use the default theme with no customization:
+While Roo Commander works out-of-the-box, these steps are recommended for the best experience, especially on complex projects:
 
-```tsx
-import { CssBaseline, ThemeProvider } from '@mui/material'
+### 1. Large Context Window API
 
-const materialYouLight = createMaterialYouTheme('light')
+Roo Commander performs best when connected to an LLM provider offering a large context window (1 million tokens or more). This allows the underlying AI models to maintain more information about your project during complex tasks. *(Note: While free tiers may exist, using large context window models via APIs can incur costs depending on your usage and the provider's pricing. Please check the provider's terms.)*
 
-return (
-  <ThemeProvider theme={materialYouLight}>
-    <CssBaseline />
-    {children}
-  </ThemeProvider>
-)
-```
+*   **Recommended Models (via Vertex AI API):**
+    *   `gemini-2.5-pro-exp-03-25`
+    *   `gemini-2.5-pro-preview-03-25`
 
-### Migrate your existing theme to Material You
+*   **Setup Guide:** Learn how to configure the Vertex AI API provider in Roo Code, including accessing models like `gemini-2.5-pro-exp-03-25` potentially for free (as of April 2025):
+    *   **Video Tutorial:** [Setting up Gemini 2.5 Pro (Free Tier) via Vertex AI for Roo Code](https://vimeo.com/1075028909/098f77b209)
+    *   **Official Roo Code Docs:** [Vertex AI Provider Setup](https://docs.roocode.com/providers/vertex)
 
-If you already have a customized theme with palette overrides, you'll need to convert your color definitions to the Material You system.
+### 2. Model Context Protocol (MCP) Servers
 
-1. Open the official [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
-2. Export your theme as a JSON file
-3. Select the desired scheme (e.g., `light`) from the `schemes` object
-4. Copy the scheme object and save it in your project
+MCP (Model Context Protocol) servers are separate helper applications that provide Roo Commander's AI agents with additional tools and capabilities beyond standard LLM functions, such as live web searching or advanced file system interactions. Installing relevant MCP servers is highly recommended.
 
-> Notes:
->
-> - `createMaterialYouTheme` internally uses `createTheme`, so do **not** call it manually.
-> - Do **not** pass `palette` directly in `themeOptions` — the colors are handled automatically from the scheme.
+*   **Vertex AI MCP Server:** Provides tools for web search-augmented queries, documentation lookups, code generation, and advanced file system operations.
+    *   **Repository & Installation:** [`shariqriazz/vertex-ai-mcp-server`](https://github.com/shariqriazz/vertex-ai-mcp-server) (Includes easy NPM install option)
+*   **GitHub MCP Server:** Offers tools for interacting with GitHub repositories.
+    *   **Repository:** [`github/github-mcp-server`](https://github.com/github/github-mcp-server)
 
-```tsx
-import { CssBaseline, ThemeOptions, ThemeProvider } from '@mui/material'
+*(Refer to Roo Commander's initial prompt (Option 0) or the `agent-mcp-manager` mode for installing and managing MCP servers.)*
 
-// Scheme from official builder
-const scheme = {
-  primary: '#3C6090',
-  onPrimary: '#FFFFFF',
-  // ...
-}
 
-// Your custom theme options
-const themeOptions: ThemeOptions = {
-  typography: { ... },
-  components: { ... },
-}
+## Contributing
 
-// Add missing colors not included in Material You
-const missingColors = {
-  info: '#0000ff',
-  success: '#00ff00',
-  warning: '#ff0000',
-}
+*(Optional: Add guidelines if you welcome contributions)*
 
-const customMaterialYouTheme = createMaterialYouTheme(
-  'light',
-  scheme,
-  themeOptions,
-  missingColors,
-)
+## License
 
-return (
-  <ThemeProvider theme={customMaterialYouTheme}>
-    <CssBaseline />
-    {children}
-  </ThemeProvider>
-)
-```
+This project is licensed under the MIT License - see the [`LICENSE`](./LICENSE) file for details.
 
-### React 19 Compatibility
+---
 
-For React 19 applications, you can use the compatibility layer:
-
-```tsx
-import { CssBaseline, ThemeProvider } from '@mui/material'
-import { createCompatibleTheme } from 'mui-create-material-you-theme'
-
-const materialYouLight = createCompatibleTheme('light')
-
-return (
-  <ThemeProvider theme={materialYouLight}>
-    <CssBaseline />
-    {children}
-  </ThemeProvider>
-)
-```
-
-### Advanced theme migration (manual control)
-
-If you need full control over the theme creation process:
-
-```tsx
-import { createTheme, CssBaseline, ThemeOptions, ThemeProvider } from '@mui/material'
-
-const scheme = {}
-const themeOptions: ThemeOptions = {}
-const missingColors = {}
-
-// `scheme` contains all colors which are needed to create MUI2 palette
-const scheme = getMaterialYouScheme(mode, exportedScheme, missingColors)
-
-// `palette` contains colors mapped to MUI2 palette
-const palette = getMaterialYouPalette(mode, scheme)
-
-// `theme` merges your `themeOptions` and Material You palette
-const theme = createTheme({ ...themeOptions, palette })
-
-const components = getMaterialYouComponents(theme)
-
-// `themeWithComponent` merges `theme` and Material You components styles
-const themeWithComponents = createTheme(theme, { components })
-
-return (
-  <ThemeProvider theme={themeWithComponents}>
-    <CssBaseline />
-    {children}
-  </ThemeProvider>
-)
-```
-
-### Customize components further
-
-If you want to make deeper changes to component styling, clone this repository and copy the `src/lib` folder into your project.
-
-You can then adjust component styles as needed.
-
-> If you fix bugs or improve design fidelity with the Material You spec, please consider submitting a pull request!
-
-## 🙏 Acknowledgments
-
-Styles based on [react-material-you-theme](https://github.com/ZakAlbert/react-material-you-theme/)
-# mui-create-material-you-theme
+Command your virtual team and build amazing things!

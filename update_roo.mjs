@@ -524,6 +524,69 @@ async function cleanupTempDir() {
     }
 }
 
+/** Updates .gitignore to include Roo-related directories and files */
+async function updateGitignore() {
+    const gitignorePath = path.join(process.cwd(), '.gitignore');
+    await logger.info('Updating .gitignore with Roo-related entries...');
+    
+    try {
+        // Entries to add to .gitignore
+        const rooEntries = [
+            '# Roo Commander related files and directories',
+            '.roo/',
+            '.ruru/',
+            '.roomodes',
+            '.roo-temp/',
+            '.roo-backup/',
+            'roo-update.log'
+        ];
+        
+        // Check if .gitignore exists
+        let currentContent = '';
+        try {
+            currentContent = await fs.readFile(gitignorePath, 'utf8');
+        } catch (err) {
+            if (err.code === 'ENOENT') {
+                // File doesn't exist, create it
+                await logger.info('.gitignore not found, creating new file');
+                currentContent = '';
+            } else {
+                throw err;
+            }
+        }
+        
+        // Check if entries already exist
+        let needsUpdate = false;
+        for (const entry of rooEntries) {
+            // Skip comment line when checking
+            if (entry.startsWith('#')) continue;
+            
+            // Check if entry or similar entry exists
+            const pattern = new RegExp(`^${entry.replace(/\//g, '\\/')}$`, 'm');
+            if (!pattern.test(currentContent)) {
+                needsUpdate = true;
+                break;
+            }
+        }
+        
+        if (needsUpdate) {
+            // Add entries to .gitignore
+            const newContent = currentContent.trim() + 
+                (currentContent.trim().length > 0 ? '\n\n' : '') + 
+                rooEntries.join('\n') + 
+                '\n';
+            
+            await fs.writeFile(gitignorePath, newContent);
+            await logger.success('.gitignore updated with Roo-related entries');
+        } else {
+            await logger.info('Roo-related entries already exist in .gitignore');
+        }
+    } catch (error) {
+        await logger.warning(`Failed to update .gitignore: ${error.message}`);
+        // Non-critical error, don't throw
+    }
+}
+
 /** Ensures required directories exist, creating them if needed */
 async function ensureRequiredDirectories() {
     await logger.info('Ensuring required application directories exist...');
@@ -557,9 +620,60 @@ async function ensureRequiredDirectories() {
             }
         }
         await logger.success('Required application directories ensured.');
+        
+        // Ensure required files exist
+        await ensureRequiredFiles();
     } catch (error) {
         await logger.error(`Failed to ensure directories: ${error.message}`);
         // Log error, but might not be critical enough to stop update entirely
+    }
+}
+
+/** Ensures required files exist, creating them if needed */
+async function ensureRequiredFiles() {
+    await logger.info('Ensuring required application files exist...');
+    
+    try {
+        // Check and create .roomodes if it doesn't exist
+        const roomodesPath = path.join(process.cwd(), CONFIG.requiredFiles[0]);
+        try {
+            await fs.access(roomodesPath);
+            await logger.info(`Required file exists: ${CONFIG.requiredFiles[0]}`);
+        } catch (e) {
+            if (e.code === 'ENOENT') {
+                // Create a basic .roomodes file with required modes
+                const basicRoomodes = {
+                    customModes: [
+                        {
+                            slug: "roo-commander",
+                            name: "Roo Commander",
+                            description: "Core mode for Roo Commander functionality",
+                            version: "1.0.0"
+                        },
+                        {
+                            slug: "manager-onboarding",
+                            name: "Manager Onboarding",
+                            description: "Onboarding functionality for new projects",
+                            version: "1.0.0"
+                        },
+                        {
+                            slug: "manager-project",
+                            name: "Manager Project",
+                            description: "Project management functionality",
+                            version: "1.0.0"
+                        }
+                    ]
+                };
+                
+                await fs.writeFile(roomodesPath, JSON.stringify(basicRoomodes, null, 2));
+                await logger.success(`Created missing required file: ${CONFIG.requiredFiles[0]}`);
+            } else {
+                throw e; // Re-throw other errors
+            }
+        }
+    } catch (error) {
+        await logger.error(`Failed to ensure required files: ${error.message}`);
+        // Log error, but continue with the update process
     }
 }
 
@@ -607,6 +721,10 @@ async function runUpdater() {
         const currentVersion = await getCurrentVersion();
         await logger.info(`Current Version: ${currentVersion || 'Unknown'}`);
         const detailedCheckOk = await performDetailedInstallationCheck();
+        
+        // Update .gitignore even in check mode
+        await updateGitignore();
+        
         if (detailedCheckOk) {
             await logger.success('✅ Roo Commander installation appears valid.');
             return true;
@@ -690,6 +808,7 @@ async function runUpdater() {
 
     // --- Post-Update Steps ---
     await ensureRequiredDirectories(); // Ensure structure again after applying
+    await updateGitignore(); // Update .gitignore with Roo-related entries
     const baseValidationOk = await validateBaseInstallation(); // Quick check
 
     if (!baseValidationOk) {
